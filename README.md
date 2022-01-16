@@ -9,5 +9,5 @@ gdy dochodzi jakas "produkcja" czyli budynki domek, drwal, kamieniolom i kopalni
 
 
 
-#budynki bez entry()
+# budynki bez entry()
 wszystkie klasy dziedziczą po klasie building, w ktorej jest ulepszanie niszczenie info o budynku, oraz @abstractmethod entry() do napisania :D
