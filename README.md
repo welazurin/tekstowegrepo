@@ -7,4 +7,7 @@ level, koszt drewna, koszt kamienia, koszt złota, czas ulepszania, czas rozbior
 gdy dochodzi jakas "produkcja" czyli budynki domek, drwal, kamieniolom i kopalnia zlota na koncu maja jeszcze wartosc okreslającą ile produkują czyli
 0,100,100,100,2,1,100 oznacza ze co ture dostajemy 100 drewna w przypadku drwala
 
+
+
+#budynki bez entry()
 wszystkie klasy dziedziczą po klasie building, w ktorej jest ulepszanie niszczenie info o budynku, oraz @abstractmethod entry() do napisania :D
