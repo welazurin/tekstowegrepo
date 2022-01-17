@@ -11,3 +11,8 @@ gdy dochodzi jakas "produkcja" czyli budynki domek, drwal, kamieniolom i kopalni
 
 # budynki bez entry()
 wszystkie klasy dziedziczą po klasie building, w ktorej jest ulepszanie niszczenie info o budynku, oraz @abstractmethod entry() do napisania :D
+
+# Entry() gotowe Dodanie City ogarniecie budowy
+Wszystkie budynki maja funkcje entry() ktora wypisuje wszystkie mozliwe poziomy budynkow koszt i produkcje
+klasa City zawiera informacje o surowacach badaniach jednostkach, w jej interfejsie bedzie rekrutowanie, budowanie i badanie
+funkcja city.building - wyswietla informacje o budynku, ulepsza je oraz burzy
