@@ -10,8 +10,7 @@ class Building:
         with open(self.file_name, "r") as file:
             line = file.readline()
             g = line.strip('\n')
-            w = g.split(sep=",")
-            print(line)
+            w = g.split(sep=" ")
             self.level = int(w[0])
             for i in range(3):
                 self.cost.append(int(w[1+i]))
@@ -45,7 +44,7 @@ class Building:
             while True:
                 line = file.readline()
                 g = line.strip('\n')
-                w = g.split(sep=",")
+                w = g.split(sep=" ")
                 if int(w[0]) == self.level:
                     for i in range(3):
                         self.cost[i] = (int(w[i+1]))

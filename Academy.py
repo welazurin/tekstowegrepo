@@ -4,19 +4,17 @@ from Building import Building
 class Academy(Building):
     def __init__(self):
         super().__init__("Academy", False)
-        self.tests = []
-
 
     def enter(self):
-        pass
+        print(self.name)
+        print("Poziom: ",self.level)
+        print("Koszt budowy: ", self.cost)
+        print("Czas budowy: ", self.time[0])
 
-    def showTests(self):
-        with open("files/Tests.txt", "r") as file:
-            list = file.read()
-            line = list.split("\n")
-            for i in line:
-                if i == '':
-                    pass
-                else:
-                    self.tests.append(i.split(" "))
-        print(self.tests)
+        print("Informacje o budynku")
+        print("poziom, koszt drewna, kamienia, zlota, czas budowy, czas rozbiorki, liczba mieszkancow")
+        self.show_info()
+
+    def show_info(self):
+        with open("files/Gold_Mine.txt") as file:
+            print(file.read())
