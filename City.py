@@ -26,9 +26,9 @@ class City:
         self.buildings.append(wood_cutter)
         self.buildings.append(quarry)
 
-        self.wood = 300
-        self.stone = 300
-        self.gold = 300
+        self.wood = 90
+        self.stone = 90
+        self.gold = 90
         self.people = 300
         self.in_build = []
         self.in_destroy = []
@@ -42,6 +42,7 @@ class City:
                     pass
                 else:
                     self.tests.append(i.split(" "))
+        self.to_test = self.tests
 
     def building(self):
         while True:
@@ -91,6 +92,46 @@ class City:
             elif y == 0:
                 break
 
+    def test(self):
+        while True:
+            print("1 - ukonczone badania")
+            print("2 - nieukonczone badania")
+            x = int(input())
+            if x == 0:
+                break
+            elif x == 1: # ukonczone badania
+                while True:
+                    for i in range(len(self.done_test)):
+                        print(i+1, self.done_test[i][0])
+                    print("0 - wyjdz")
+                    y = int(input())
+                    if y == 0:
+                        break
+                    else:
+                        print(self.done_test[y-1])
+            elif x == 2:
+                while True:
+                    for i in range(len(self.to_test)):
+                        print(i+1, self.to_test[i][0])
+                    y = int(input())
+                    if y == 0:
+                        break
+                    else:
+                        print(self.to_test[y])
+                        print("Czy na pewno chcesz zbadac ? T/N")
+                        z = input()
+                        if z == 'T' or z == 't':
+                            if self.wood >= int(self.to_test[y][1]) and self.stone >= int(self.to_test[y][2]) and self.gold >= int(self.to_test[y][3]):
+                                self.wood = self.wood - int(self.to_test[y][1])
+                                self.stone = self.stone - int(self.to_test[y][2])
+                                self.gold = self.gold - int(self.to_test[y][3])
+                                self.done_test.append(self.to_test[y])
+                                del self.to_test[y]
+                            else:
+                                print("nie masz hajsu")
+                        else:
+                            pass
+
     def enter(self):
         print("0 - koniec tury"
               "1 - zarzadzanie budynkami"
@@ -103,6 +144,7 @@ class City:
         elif x == 1:
             self.building()
         elif x == 2:
-            pass
+            pass #TODO jednostki
         elif x == 3:
-            pass
+            self.test()
+''
