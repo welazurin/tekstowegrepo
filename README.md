@@ -16,3 +16,6 @@ wszystkie klasy dziedziczą po klasie building, w ktorej jest ulepszanie niszcze
 Wszystkie budynki maja funkcje entry() ktora wypisuje wszystkie mozliwe poziomy budynkow koszt i produkcje
 klasa City zawiera informacje o surowacach badaniach jednostkach, w jej interfejsie bedzie rekrutowanie, budowanie i badanie
 funkcja city.building - wyswietla informacje o budynku, ulepsza je oraz burzy
+
+# badania zrobione
+W klasie City dodana opcja badania. city.test()
